@@ -11,6 +11,7 @@ module.exports = {
     .setName('chifoumi')
     .setDescription('Joue au Chifoumi !! '),
   async execute(interaction) {
+    await interaction.deferReply()
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
         .setCustomId(ChifoumiCustomId.stone)
